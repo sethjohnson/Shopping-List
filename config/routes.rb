@@ -1,4 +1,9 @@
 Shoppinglist::Application.routes.draw do
+  resources "pages"
+
+    root :to => 'pages#home'
+    match "/ajax", :to => 'pages#ajax'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
